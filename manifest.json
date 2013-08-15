@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Asana linkify",
+  "description": "Make asana task ids clickable in github commits",
+  "version": "0.1",
+
+	"content_scripts": [
+		{
+			"matches": ["https://*.github.com/*"],
+			"js": ["asana-linkify.js"],
+			"run_at": "document_end"
+		}
+	]
+}
