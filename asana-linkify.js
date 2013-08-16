@@ -51,7 +51,7 @@
 
 	document.onreadystatechange = function () {
 		'use strict';
-		if (document.readyState === "complete") {
+		if (document.readyState === "complete" && window.location.host === "github.com") {
 			var container = document.querySelector('#js-repo-pjax-container');
 			replaceAsanaIdsWithLink(container);
 			observeNodeWithHandler(container, replaceAsanaIdsWithLink);
